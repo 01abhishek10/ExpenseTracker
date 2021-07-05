@@ -182,7 +182,11 @@ public ModelAndView viewXpense(ModelAndView modelAndView, Expenses xpense) {
 	}
 	return modelAndView;
 }
-
+@GetMapping("/home")
+public ModelAndView home(ModelAndView mav) {
+	mav.setViewName("home");
+	return mav;
+}
 
 @RequestMapping(value="/AddMoney", method=RequestMethod.GET)
 public ModelAndView addMoney(ModelAndView modelAndView, Balance balance) {
